@@ -9302,19 +9302,47 @@ noscript {
   display: flex;
   flex-wrap: wrap;
   font-size: 14px;
+  line-height: 18px;
   gap: 4px;
+  color: $highlight-text-color;
 
   a {
     display: inline-flex;
-    color: $dark-text-color;
+    border-radius: 4px;
+    background: rgba($highlight-text-color, 0.2);
+    color: inherit;
+    padding: 0.4em 0.6em;
     text-decoration: none;
 
     &:hover {
-      text-decoration: none;
-
-      span {
-        text-decoration: underline;
-      }
+      background: rgba($highlight-text-color, 0.3);
     }
   }
+
+  .link-button {
+    color: inherit;
+    font-size: inherit;
+    line-height: inherit;
+  }
+}
+
+.layout-multiple-columns .hashtag-bar {
+  color: $darker-text-color;
+}
+
+.layout-multiple-columns .hashtag-bar a {
+  padding: 0;
+  background: transparent;
+
+  &:hover {
+    background: transparent;
+
+    span {
+      text-decoration: underline;
+    }
+  }
+}
+
+.layout-multiple-columns .hashtag-bar .link-button {
+  padding: 0;
 }
